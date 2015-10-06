@@ -2,7 +2,7 @@
 ## Challenge 001
 In this challenge you must write a program that prints the missing digit from each line in the file input.txt.
 
-Rules:
+### Rules:
 - You may choose any programming language but we must be able to run your code. We're flexible and if we need to install a compiler we'll do it, just keep it reasonable.
 - Your program must read the file input.txt
 - Solutions with errors or warnings will not count
@@ -10,3 +10,15 @@ Rules:
 - If two solutions are exactly the same then the first commit wins.
 - Fork this repo and pull request to this branch to submit your solutions
 - We will post the winner on Sunday 11th of October, which means Saturday 10th of October is the last day for submissions.
+
+### Example:
+#### Input
+```
+123457890
+123456789
+```
+#### Output
+```
+6
+0
+```
