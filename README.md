@@ -9,4 +9,4 @@ Rules:
 - Each character counts as one point, the solution with the least amount of characters wins the challenge.
 - If two solutions are exactly the same then the first commit wins.
 - Fork this repo and pull request to this branch to submit your solutions
-- We will post the winner on Sunday 10th of October, which means Saturday 11th of October is the last day for submissions.
+- We will post the winner on Sunday 11th of October, which means Saturday 10th of October is the last day for submissions.
