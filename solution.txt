@@ -1,3 +1,3 @@
-V200Iq2lJ+PNPK+N2j\,J
+V200Iq2lJ+PNP+N2j\,J
 
-Run at https://pyth.herokuapp.com/?code=V200Iq2lJ%2BPNPK%2BN2j\%2CJ
+Run at https://pyth.herokuapp.com/?code=V200Iq2lJ%2BPNP%2BN2j\%2CJ
