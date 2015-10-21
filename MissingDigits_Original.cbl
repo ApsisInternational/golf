@@ -1,0 +1,59 @@
+IDENTIFICATION DIVISION.
+PROGRAM-ID. MISSING-DIGITS.
+
+
+ENVIRONMENT DIVISION.
+INPUT-OUTPUT SECTION.
+FILE-CONTROL.
+    SELECT INPUT-FILE  ASSIGN TO 'input.txt'
+    ORGANIZATION IS SEQUENTIAL
+    ACCESS MODE IS SEQUENTIAL
+    FILE STATUS IS WS-FILE-STATUS.
+
+DATA DIVISION.
+FILE SECTION.
+FD INPUT-FILE.
+    *> sample line '603285791'
+    *> must remember to consume line-break. :-)
+    01  RECORD-IN.
+        05  DIGITS.
+            10 D1        PIC 9.
+            10 D2        PIC 9.
+            10 D3        PIC 9.
+            10 D4        PIC 9.
+            10 D5        PIC 9.
+            10 D6        PIC 9.
+            10 D7        PIC 9.
+            10 D8        PIC 9.
+            10 D9        PIC 9.
+        05  LINE-BREAK   PIC X.
+WORKING-STORAGE SECTION.
+    01  WS-EOF           PIC A(1)  VALUE "N".
+    01  WS-FILE-STATUS   PIC X(2).
+    01  FULL-SUM         PIC 9.
+
+PROCEDURE DIVISION.
+MAIN-PARAGRAPH.
+
+    OPEN INPUT  INPUT-FILE
+    PERFORM READ-PARAGRAPH THRU READ-PARAGRAPH-EXIT UNTIL WS-EOF="Y"
+    CLOSE INPUT-FILE
+    STOP RUN.
+
+MAIN-PARAGRAPH-EXIT.
+EXIT.
+
+READ-PARAGRAPH.
+
+    READ INPUT-FILE
+    AT END
+        MOVE "Y" TO WS-EOF
+    NOT AT END
+        COMPUTE FULL-SUM =
+            (45 - D1 - D2 - D3 - D4 - D5 - D6 - D7 - D8 - D9)
+        DISPLAY FULL-SUM
+    END-READ.
+
+READ-PARAGRAPH-EXIT.
+EXIT.
+END PROGRAM MISSING-DIGITS.
